@@ -1,8 +1,11 @@
 package com.example.firebaseuploadimage;
 
+import com.google.firebase.database.Exclude;
+
 public class Upload {
     private String name;
     private String imageUri;
+    private String key;
 
 
 
@@ -32,5 +35,15 @@ public class Upload {
 
     public void setImageUri(String imageUri) {
         this.imageUri = imageUri;
+    }
+
+    @Exclude
+    public String getKey(){
+        return key;
+    }
+
+    @Exclude
+    public void setKey(String key){
+        this.key = key;
     }
 }
